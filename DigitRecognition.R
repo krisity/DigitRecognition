@@ -1,20 +1,20 @@
 #Some ideas: 
 #1. https://vimeo.com/127790185 - video showing a GUI that classifies digits (written in C++ & OpenCV) -> no code available
 #
-#2. Learning from labelled data is what is called ìsupervised learningî. Itís supervised because weíre taking 
-#   the computer by hand through the whole training data set and ìteachingî it how the data that is linked with
-#   different labels ìlooksî like.
+#2. Learning from labelled data is what is called ?supervised learning?. It?s supervised because we?re taking 
+#   the computer by hand through the whole training data set and ?teaching? it how the data that is linked with
+#   different labels ?looks? like.
 #
 # Source for below: https://www.endpoint.com/blog/2017/05/30/recognizing-handwritten-digits-quick
 #3. For the task of classifying I decided to use the XGBoost library which is somewhat a hot new technology in 
-#   the world of machine learning. Itís an improvement over the so-called Random Forest algorithm. The reader 
+#   the world of machine learning. It?s an improvement over the so-called Random Forest algorithm. The reader 
 #   can read more about XGBoost on its website: https://xgboost.readthedocs.io/.
 
 #Get the current working directory:
 getwd()
 
 #Change the working directory to more appropriate one
-setwd("D:/“”-‰ËÔÎÓÏÌ‡ ‡·ÓÚ‡/Digit Recognizer")
+setwd("D:/TU-Project/Digit Recognizer")
 
 
 #Load the data sets - test and train which were first downloaded from kaggle
@@ -408,7 +408,7 @@ library(caret)
 rmse <- RMSE(prediction.knn, test.data.label.only)
 rmse
 
-#The MSE is a measure of the quality of an estimatoróit is always
+#The MSE is a measure of the quality of an estimator?it is always
 #non-negative, and values closer to zero are better
 mse <- mean((test.data.label.only - prediction.knn)^2)
 mse
@@ -479,7 +479,7 @@ model.fnn1  <- as.numeric(model.fnn1)
 rmse <- RMSE(model.fnn1, test.data.label.only)
 rmse # 0.82
 
-#The MSE is a measure of the quality of an estimatoróit is always
+#The MSE is a measure of the quality of an estimator?it is always
 #non-negative, and values closer to zero are better
 mse <- mean((test.data.label.only - model.fnn1)^2)
 mse #0.67
@@ -593,7 +593,7 @@ library(caret)
 rmse <- RMSE(as.integer(prediction.naiveBayes), test.data.label.only)
 rmse #3.34
 
-#The MSE is a measure of the quality of an estimatoróit is always
+#The MSE is a measure of the quality of an estimator?it is always
 #non-negative, and values closer to zero are better
 prediction.naiveBayesIntege <- as.integer(prediction.naiveBayes)
 mse <- mean((test.data.label.only - prediction.naiveBayesIntege)^2)
@@ -825,7 +825,7 @@ table(`Actual Class` = test.data.label.only, `Predicted Class` = pred)
 rmse <- RMSE(as.integer(pred), test.data.label.only)
 rmse # 1.051529
 
-#The MSE is a measure of the quality of an estimatoróit is always
+#The MSE is a measure of the quality of an estimator?it is always
 #non-negative, and values closer to zero are better
 mse <- mean((test.data.label.only - as.numeric(pred))^2)
 mse #1.105714
@@ -944,7 +944,7 @@ library(caret)
 rmse <- RMSE(as.integer(labels), test.data.label.only)
 rmse # 1.050737
 
-#The MSE is a measure of the quality of an estimatoróit is always
+#The MSE is a measure of the quality of an estimator?it is always
 #non-negative, and values closer to zero are better
 mse <- mean((test.data.label.only - as.numeric(labels))^2)
 mse #1.104048
@@ -1054,7 +1054,7 @@ print(paste0("Accuary (Precision): ", 1 - error.rate.rpart))
 rmse <- RMSE(as.numeric(prediction.rpart), test.data.label.only)
 rmse # 2.80
 
-#The MSE is a measure of the quality of an estimatoróit is always
+#The MSE is a measure of the quality of an estimator?it is always
 #non-negative, and values closer to zero are better
 mse <- mean((test.data.label.only - as.numeric(prediction.rpart))^2)
 mse #7.854524
@@ -1162,7 +1162,7 @@ print(paste0("Accuary (Precision): ", 1 - error.rate.rpart))
 rmse <- RMSE(as.numeric(predictions[,-1]), test.data.label.only)
 rmse # 1.060548
 
-#The MSE is a measure of the quality of an estimatoróit is always
+#The MSE is a measure of the quality of an estimator?it is always
 #non-negative, and values closer to zero are better
 mse <- mean((test.data.label.only - as.numeric(predictions[,-1]))^2)
 mse #1.124762
@@ -1269,7 +1269,7 @@ write.csv(sam,file='submisssion.csv')
 rmse <- RMSE(as.numeric(sam), test.data.label.only)
 rmse # 2.363563
 
-#The MSE is a measure of the quality of an estimatoróit is always
+#The MSE is a measure of the quality of an estimator?it is always
 #non-negative, and values closer to zero are better
 mse <- mean((test.data.label.only - as.numeric(sam))^2)
 mse #5.586429
